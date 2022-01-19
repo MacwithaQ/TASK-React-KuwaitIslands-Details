@@ -1,4 +1,5 @@
 import { useState } from "react/cjs/react.development";
+import Island from "./Island";
 
 export default function IslandForm({ island }) {
   const [name, setName] = useState("");
@@ -10,8 +11,7 @@ export default function IslandForm({ island }) {
   const PHONE_NUMBER = phone;
   const NAME = name;
   const ISLAND_NAME = island.name;
-
-
+  
 
   return (
     <div className="form">
@@ -27,11 +27,15 @@ export default function IslandForm({ island }) {
       />
       <button
         className="book"
-        onClick={(event) => {if(
-          window.confirm(
-            `Are you sure you want to book to ${ISLAND_NAME} with the Name: ${NAME}, phone: ${PHONE_NUMBER}`
-          )){}}
-        }
+        onClick={(event) => {
+          if (
+            window.confirm(
+              `Are you sure you want to book to ${ISLAND_NAME} with the Name: ${NAME}, phone: ${PHONE_NUMBER}`
+            )
+          ) {
+            alert("you registered the okay.");
+          }
+        }}
       >
         Book for today!
       </button>

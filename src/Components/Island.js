@@ -1,6 +1,7 @@
 import React from "react";
+import { useState } from "react";
 
-export default function Island({ island, setIsland }) {
+export default function Island({island, setIsland}) {
   const islandChanger = () => setIsland(island);
 
   return (

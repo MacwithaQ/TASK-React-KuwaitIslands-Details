@@ -7,7 +7,7 @@ export default function IslandList({setIsland}) {
 
   let islandsArray = islands
     .filter((island) => island.name.toLowerCase().includes(query.toLowerCase()))
-    .map((island) => <Island island={island} setIsland={setIsland} />);
+    .map((island) => <Island key={island.id} island={island} setIsland={setIsland}/>);
   return (
     <div>
       <input
